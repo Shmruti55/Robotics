@@ -1,0 +1,31 @@
+#Write a program to do a square using a while loop, doing steps with a for loop, changing directions based on a condition, and controlling
+motor speed using switch case.
+#Filename: Square.java
+
+
+import ch.aplu.robotsim.*;
+
+public class Square
+{
+    public Square()
+    {
+        TurtleRobot robot = new TurtleRobot();
+
+        int i = 0;
+
+        while (i < 4)
+        {
+            robot.forward(50);
+            robot.right(90);
+
+            i++;
+        }
+
+        robot.exit();
+    }
+
+    public static void main(String[] args)
+    {
+        new Square();
+    }
+}
