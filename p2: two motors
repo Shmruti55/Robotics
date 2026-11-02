@@ -1,0 +1,53 @@
+#Write a program to create a robot with two motors and move it forward, left, and right.
+
+#Filename: Pract2.java
+
+import ch.aplu.robotsim.*;
+
+public class Pract2
+{
+    public Pract2()
+    {
+        LegoRobot robot = new LegoRobot();
+
+        Motor motA = new Motor(MotorPort.A);
+        Motor motB = new Motor(MotorPort.B);
+
+        robot.addPart(motA);
+        robot.addPart(motB);
+
+        System.out.println("Motor A forward, Motor B forward");
+        motA.forward();
+        motB.forward();
+        Tools.delay(2000);
+
+        System.out.println("Motor A stop");
+        motA.stop();
+        Tools.delay(2000);
+
+        System.out.println("Motor B stop");
+        motB.stop();
+        Tools.delay(2000);
+
+        System.out.println("Motor A backward, Motor B forward");
+        motA.backward();
+        motB.forward();
+        Tools.delay(2000);
+
+        System.out.println("Both motors backward");
+        motA.backward();
+        motB.backward();
+        Tools.delay(2000);
+
+        motA.stop();
+        motB.stop();
+
+        System.out.println("Exiting");
+        robot.exit();
+    }
+
+    public static void main(String[] args)
+    {
+        new Pract2();
+    }
+}
