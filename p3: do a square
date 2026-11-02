@@ -2,7 +2,6 @@
 motor speed using switch case.
 
 #Filename: Square.java
-
 import ch.aplu.robotsim.*;
 
 public class Square
@@ -31,6 +30,9 @@ public class Square
 }
 
 
+
+
+2. Doing steps with a for loop
 #Filename: Steps.java
 
 import ch.aplu.robotsim.*;
@@ -59,6 +61,10 @@ public class Steps
     }
 }
 
+
+
+
+3. Change directions based on condition
 #Filename: RandomMove.java
 import ch.aplu.robotsim.*;
 
@@ -93,6 +99,10 @@ public class RandomMove
     }
 }
 
+
+
+
+Controlling motor speed using switch case.
 #Filename: SpeedSwitch.java
 import ch.aplu.robotsim.*;
 
