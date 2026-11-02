@@ -1,0 +1,78 @@
+'''
+java editor - file- new- java
+
+window-
+configuration-class path user edit- remove tick
+
+new jar file- j game grid- 
+lib - jgamegrid.jar
+robotsim-lib- robotsim.jar
+
+save- save 
+file-saveas- desktop- jgamegrid-robotsim-eg- save
+'''
+
+#1(A). With Gear
+#Filename: WithGear.java
+
+import ch.aplu.robotsim.*;
+
+public class WithGear
+{
+    public WithGear()
+    {
+        LegoRobot robot = new LegoRobot();
+        Gear gear = new Gear();
+
+        robot.addPart(gear);
+
+        gear.setSpeed(20);
+
+        gear.forward();
+        Tools.delay(2000);
+
+        gear.left(2000);
+        gear.forward(2000);
+
+        gear.leftArc(0.2, 2000);
+        gear.forward(2000);
+
+        gear.leftArc(-0.2, 2000);
+        gear.right(2000);
+
+        robot.exit();
+    }
+
+    public static void main(String[] args)
+    {
+        new WithGear();
+    }
+}
+
+#1(B). Without Gear
+#Filename: WithoutGear.java
+
+import ch.aplu.robotsim.*;
+
+public class WithoutGear
+{
+    public WithoutGear()
+    {
+        TurtleRobot robot = new TurtleRobot();
+
+        robot.forward(100);
+        robot.left(90);
+
+        robot.forward(50);
+        robot.right(90);
+
+        robot.forward(50);
+
+        robot.exit();
+    }
+
+    public static void main(String[] args)
+    {
+        new WithoutGear();
+    }
+}
