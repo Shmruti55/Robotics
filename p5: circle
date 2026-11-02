@@ -1,0 +1,35 @@
+#
+#Filename: CircleMotor.java
+import ch.aplu.robotsim.*;
+
+public class CircleMotor
+{
+    public CircleMotor()
+    {
+        LegoRobot robot = new LegoRobot();
+
+        Motor motA = new Motor(MotorPort.A);
+        Motor motB = new Motor(MotorPort.B);
+
+        robot.addPart(motA);
+        robot.addPart(motB);
+
+        motA.setSpeed(60);
+        motB.setSpeed(30);
+
+        motA.forward();
+        motB.forward();
+
+        Tools.delay(10000);
+
+        motA.stop();
+        motB.stop();
+
+        robot.exit();
+    }
+
+    public static void main(String[] args)
+    {
+        new CircleMotor();
+    }
+}
